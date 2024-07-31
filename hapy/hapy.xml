@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>hapy-automation</Name>
+  <Repository>jonrivala/hapy</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/jon-alamo/hapy-automation</Project>
+  <Overview>Home Assistant Python Automation tool.&#xD;
+&#xD;
+Automation flow execution for Home Assistant using Python. It comes with a self-discovery feature that generates Python modules where entities, devices and services are type-hinted and bound statically, so the IDE can provide auto-completion and type checking when creating automations based on state changes in entities or action triggers in devices (if using ZHA Plugin).&#xD;
+&#xD;
+&#xD;
+NOTE: First time the app runs, will output in console a public .ssh key that its needed to be added to the git's access keys. The key can be also found in mapped volume /mnt/user/appdata/hapy/.ssh&#xD;
+</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1722456652</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="HA_API_URL" Target="HA_API_URL" Default="http://homeassistant.local:8123/api" Mode="" Description="Home Assistant API url in the form:&#13;&#10;http://&amp;lt;homeassistant-ip&amp;gt;:&amp;lt;port&amp;gt;/api" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="HA_WS_URL" Target="HA_WS_URL" Default="ws://homeassistant.local:8123/api/websocket" Mode="" Description="Home Assistant Web Socket API url in the form:&#13;&#10;ws://&amp;lt;ha-url&amp;gt;:&amp;lt;ha-port&amp;gt;/api/websocket" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="HA_TOKEN" Target="HA_TOKEN" Default="" Mode="" Description="Home Assistant API token" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="REPOSITORY_URL" Target="REPOSITORY_URL" Default="" Mode="" Description="URL to an empty git repository or a previous one used with this tool.&#13;&#10;ie: git@github.com:&amp;lt;user&amp;gt;/&amp;lt;repo-name&amp;gt;.git" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path 1" Target="/hapy/user" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hapy/user</Config>
+  <Config Name="Host Path 2" Target="/root/.ssh" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hapy/.ssh</Config>
+</Container>
